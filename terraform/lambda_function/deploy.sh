@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+curl -O https://releases.hashicorp.com/terraform/1.7.5/terraform_1.7.5_linux_amd64.zip
+unzip -o terraform_1.7.5_linux_amd64.zip
+sudo mv terraform /usr/local/bin/
+
 # Check dependencies
 for cmd in aws terraform docker zip sed; do
   if ! command -v $cmd &> /dev/null; then
