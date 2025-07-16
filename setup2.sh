@@ -52,7 +52,7 @@ aws lambda create-function \
   --handler lambda_function.lambda_handler \
   --zip-file fileb://$ZIP_FILE \
   --region $REGION \
-  --environment Variables="{OPENWEATHER_API_KEY=0fcf120f858a4b75af80f6ffe030e295,S3_BUCKET_NAME=$BUCKET_NAME,CITY=Tampa,US,S3_KEY=$ZIP_KEY}" \
+  --environment Variables="{OPENWEATHER_API_KEY=0fcf120f858a4b75af80f6ffe030e295,S3_BUCKET_NAME=sadasdasdasd13,CITY=\"Tampa,US\",S3_KEY=weather_data.csv}"
   > /dev/null
 
 # === STEP 6: CREATE CLOUDWATCH SCHEDULE RULE ===
